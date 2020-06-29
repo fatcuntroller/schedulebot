@@ -12,15 +12,13 @@ console.log("Hello! Welcome to the ScheduleBot setup script.\n" +
 	"This script will create your database structure to get ScheduleBot working.\n" +
 	"First, let's connect to your postgres database. Enter your db info:\n");
 
-inquirer.prompt(dbDetails).then(answers => {
-	pg.defaults.ssl = answers.db_ssl;
 
-	let conStr = "postgres://" + answers.db_user + ":" + answers.db_password
-		+ "@" + answers.db_host + "/" + answers.db_database;
+	pg.defaults.ssl = true;
+
+	let conStr = "postgres://vskgzxvzktntwt:6aa4bea6f47c2a90dbda646ad7bc1ef908cd821c1e126907f0802acc717a9bb9@ec2-34-224-229-81.compute-1.amazonaws.com:5432/daiobklm109vvp";
 
 	let client = new pg.Client(conStr);
 	console.log("It actually connects")
-
 	client.connect(err => {
 		console.log("It actually connects")
 		if (!err) {
@@ -123,7 +121,7 @@ inquirer.prompt(dbDetails).then(answers => {
 			process.exit();
 		}
 	});
-}).catch(console.error);
+
 
 function createDbStructure(client) {
 	return new Promise((fulfill, reject) => {
