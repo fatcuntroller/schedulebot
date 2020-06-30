@@ -61,7 +61,7 @@ module.exports = {
 	// More info: https://discordapp.com/developers/docs/topics/permissions
 	delete_after_reply: {
 		enabled: true,
-		time: 60000 // In milliseconds
+		time: 30000 // In milliseconds
 	},
 
 	// If true, it will delete any message that is not a command from the master channel.
@@ -121,8 +121,8 @@ module.exports = {
 		// If enabled is true, the bot will ticket any lobbies using the provided league id.
 		// Make sure that the steam bot is an admin of that league.
 		ticketing: {
-			enabled: false,
-			league_id: 12345
+			enabled: true,
+			league_id: 11425
 		},
 
 		// If enabled is true, the bot will fetch MMR from OpenDota for every user that links
