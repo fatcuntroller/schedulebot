@@ -31,7 +31,7 @@ module.exports = {
 
 	// The master channel
 	// The bot will announce the events to this channel. It won't listen to other channels.
-	master_channel: "726814354284085279",
+	master_channel: "727506453857828936",
 
 	// Events are considered "happening" for a margin of time, where users can see that the event
 	// is happening right now. During that time, the event is not considered expired yet.+
@@ -67,7 +67,7 @@ module.exports = {
 	// If true, it will delete any message that is not a command from the master channel.
 	// Leave this on to keep your master channel tidy.
 	// This also requires the "manage messages" permission
-	disallow_talking: false,
+	disallow_talking: true,
 
 	// If false, all (non-blacklisted) users will be able to add inhouses to created events.
 	// If true, only admins will be able to do so.
