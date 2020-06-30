@@ -71,7 +71,7 @@ module.exports = {
 
 	// If false, all (non-blacklisted) users will be able to add inhouses to created events.
 	// If true, only admins will be able to do so.
-	add_inhouse_is_admin_command: false,
+	add_inhouse_is_admin_command: true,
 
 	// quick-inhouse command
 	// This command creates an instant lobby and adds an inhouse with the default values.
